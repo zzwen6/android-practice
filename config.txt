@@ -1,0 +1,34 @@
+@androidx.annotation.Nullable
+@android.support.annotation.Nullable
+
+implementation 'androidx.annotation:annotation:1.0.0'
+
+
+
+//处理所有报META-INF/*'的错误
+   packagingOptions {
+        pickFirst 'META-INF/*'
+   }
+
+
+
+compile "javax.annotation:javax.annotation-api:1.16.10"
+compile "org.projectlombok:lombok:1.16.10'"
+
+@AllArgsConstructor(suppressConstructorProperties = true)
+
+
+
+
+
+compileOnly 'org.glassfish:javax.annotation:10.0-b28'
+compileOnly "org.projectlombok:lombok:1.16.16"
+annotationProcessor "org.projectlombok:lombok:1.16.16"
+
+
+
+ javaCompileOptions {
+                annotationProcessorOptions {
+                      includeCompileClasspath true
+                  }
+             }
